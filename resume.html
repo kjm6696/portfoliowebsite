@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Koben Milam Portfolio</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="resume.css">
+        <script src="js/main.js"></script>
+    </head>
+    <body>
+        <div class="header">
+            <h1 class="titleName">Koben Milam</h1>
+            <p class="desc">Resume</p>
+        </div>
+        <div class="topNav">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="project.html">Projects</a>
+            <a href="skills.html">Skills</a>
+            <a href="classes.html">Classes</a>
+            <a href="resume.html">Resume</a>
+            <a href="contact.html">Contact</a>
+        </div>
+        <div class="container">
+            <div class="flex-container">
+                <a href="https://github.com/kjm6696" alt="GitHub Image" class="git"><img src="assets/GitHub.png"></a>
+                <a href="https://www.linkedin.com/in/koben-milam/" alt="LinkedIn Image" class="linked"><img src="assets/LinkedIn.png"></a>
+            </div>
+            <div class="resume-container">
+                <img src="assets/Resume.png" alt="Resume Image" class="resume" id="resume-img">
+                <div id="myModal" class="modal">
+                    <span class="close">&times;</span>
+                    <img class="modal-content" id="img01">
+                </div>
+            </div>
+        </div> 
+        <div class="footer">
+
+        </div>       
+        <script>
+
+            document.addEventListener("DOMContentLoaded", function() {
+                document.querySelector(".container").classList.add("show");
+            });
+
+            document.addEventListener("DOMContentLoaded", function() {
+                var modal = document.getElementById("myModal");
+                var img = document.getElementById("resume-img");
+                var modalImg = document.getElementById("img01");
+                var span = document.getElementsByClassName("close")[0];
+
+                img.onclick = function(){
+                    modal.style.display = "block";
+                    modalImg.src = this.src;
+                }
+
+                span.onclick = function() {
+                    modal.style.display = "none";
+                }
+
+                window.onclick = function(event) {
+                    if (event.target == modal) {
+                        modal.style.display = "none";
+                    }
+                }
+            });
+        </script>
+    </body>
+</html>

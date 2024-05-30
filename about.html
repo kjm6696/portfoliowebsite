@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Koben Milam Portfolio</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="about.css">
+        <script src="js/main.js"></script>
+    </head>
+    <body>
+        <div class="header">
+            <h1 class="titleName">Koben Milam</h1>
+            <p class="desc">About Me</p>
+        </div>
+        <div class="topNav">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="project.html">Projects</a>
+            <a href="skills.html">Skills</a>
+            <a href="classes.html">Classes</a>
+            <a href="resume.html">Resume</a>
+            <a href="contact.html">Contact</a>
+        </div >
+        <div class="flex-container">
+            <div class="content">
+                <div class="content-left">
+                    <h1>Introduction</h1>
+                    <p>My name is Koben Milam, I am 23 years old, and located in western Maryland. I began college unsure of what I wanted to do, and after a turning point in my life, I decided to embark on my journey studying IST (Information Science and Technology). 
+                        I am currently unemployed and studying full-time. I am driven by the joy of creating fun projects and improving the user experience in already created applications/ projects. As a career, I’m not so picky as I love most of what I do. Some highlighted
+                        fields I would love to get a job in are Front End Development, Application Development, and IT. I am a loving and caring person. I also enjoy creating quality work within a team or even in a solo environment.</p>
+                </div>
+                <div class="content-right">
+                    <img src="assets/koben.png" alt="Koben Milam">
+                </div>
+            </div>
+            <div class="splitter"></div>
+
+            <div class="content">
+                <div class="content-left">
+                    <h1>Personal Story</h1>
+                    <img src="assets/map.png" alt="Map of US">
+                </div>
+                <div class="content-right">
+                    <p>I was born in Arizona on December 21, 2000, and lived there until I was about 3 years old. My family and I moved to a town in Pennsylvania known as Hanover. This town is where I spent the majority of my childhood and where I made all my friends.
+                        During my adolescents my spark for technology really started. I began learning how to build computers at a young age and started gaming on a PC. After graduating from High School I was unsure what I wanted to do, so I enrolled at Shippensburg University 
+                        with an Undecided/Exploratory Major. During my time at Shippensburg University, Covid-19 moved me into an online learning environment. After the pandemic, I decided to apply to Penn State University Park and began my journey studying IST. I now graduate with 
+                        a bachelor's degree in the fall semester of 2024 where I hope to already had an internship and I can begin my professional career.</p>
+                </div>
+                
+            </div>
+            <div class="splitter"></div>
+
+            <div class="content">
+                <div class="content-left">
+                    <h1>Goals</h1>
+                    <p>My goals consist of personal goals, career goals, and educational goals. All of which I hope to work on after graduation and upon starting my professional career. All of which are ranged within a reasonable 5 years.</p>
+                </div>
+                <div class="content-right">
+                    <ul>Educational Goals
+                        <li>Graduate University in December of 2024.</li>
+                        <li>Complete multiple certifications in aid of my resume.</li>
+                        <li>Enroll in school to get my masters degree.</li>
+                    </ul>
+                    <ul>Career Goals
+                        <li>Find an internship for fall of 2024.</li>
+                        <li>Get employed by my first professional job.</li>
+                        <li>Find a job that I want to do permanently.</li>
+                    </ul>
+                    <ul>Personal Goals
+                        <li>Buy or morgage a house.</li>
+                        <li>Go outside more whether its a hobby or just to get some sun.</li>
+                        <li>Find a new hobby to do.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="splitter"></div>
+
+            <div class="content">
+                <div class="content-left">
+                    <h1>Interest</h1>
+                    <img src="assets/fish.png" alt="Koben Milam with a fish" class="fish">
+                </div>
+                <div class="content-right">
+                    <p>To spend time away from the computer I enjoy engaging to distracting activities. I enjoy fishing in different locations, golfing with my brother, playing video games with my friends, eating new food, traveling to new places, and on the rare occasion I enjoy playing Magic the Gathering with my brothers.</p>
+                </div>
+            </div>
+            
+            <div class="splitter"></div>
+
+            <div class="content">
+                <div class="content-left">
+                    <h1>Education</h1>
+                    <p>I went to High School in Hanover PA. After Highschool I enrolled at Shippensburg University in 2019 majoring in their undecided program where I just take general education courses and stayed there until Spring of 2021. I then transfered to Penn State University in Fall of 2021 initially majoring in Animal Science,
+                        I had a love for animal and really wanted to do something with them but after a semester I realized that I wanted to do something with technology. I then switched my major to IST (Information Science and Technology) where I am currently studying full-time and plan to graduate in the Fall of 2024.</p>
+                    </p>
+                </div>
+                <div class="content-right">
+                    <img src="assets/school.png" alt="Koben Milam schools" class="school">
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+
+        </div>
+
+        <script>
+            const flexItems = document.querySelectorAll('.flex-container > *');
+
+            function handleIntersection(entries, observer) {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = 1;
+                        observer.unobserve(entry.target);
+                    } else {
+                        entry.target.style.opacity = 0;
+                    }
+                });
+            }
+
+            const observer = new IntersectionObserver(handleIntersection, { threshold: 0.5 });
+
+            // Initial observation
+            flexItems.forEach(item => {
+                observer.observe(item);
+            });
+
+            // Re-observe items on scroll to re-trigger the animation
+            window.addEventListener('scroll', function() {
+                flexItems.forEach(item => {
+                    observer.observe(item);
+                });
+            });
+        </script>
+    </body>
+</html>

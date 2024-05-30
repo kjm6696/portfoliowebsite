@@ -1,0 +1,126 @@
+.flex-container {
+    display: flex;
+    flex-direction: column;
+    animation: fadeInAnimation ease 2s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.content {
+    display: flex;
+    flex-direction: row;
+    margin-top: 1%;
+    font-family: Arial;
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+
+.content h1 {
+    font-size: 25px;
+    margin: auto;
+    margin-left: 25%;
+    margin-right: 50%;
+}
+
+.content-left {
+    width: 50%;
+    margin: auto;
+    float: left;
+}
+
+.content-left p {
+    margin-left: 25%;
+    margin: auto;
+    font-size:20px;
+    margin-left: 50%;
+    margin-top: 0%;
+}
+
+.content-left img {
+    width: 40%;
+    margin: auto;
+    margin-left: 50%;
+    border: #000000 solid 1px ;
+}
+
+.content-right {
+    margin: auto;
+    width: 50%;
+    float: right;
+    margin-right: 5%;
+}
+
+.content-right ul {
+    margin-left: 25%;
+    margin: auto;
+    font-size:20px;
+    margin-left: 15%;
+    font-style: italic;
+    margin-bottom: 2%;
+}
+
+.content-right li {
+    margin-left: 25%;
+    margin: auto;
+    font-size:20px;
+    margin-left: 15%;
+    font-style: normal;
+}
+
+.content-right p {
+    margin-right: 25%;
+
+    font-size:20px;
+    margin-left: 15%;
+}
+
+.content-right img {
+    width: 35%;
+    margin: auto;
+    margin-left: 25%;
+    border: #000000 solid 1px ;
+}
+
+.splitter {
+    display: flex;
+    margin-top: 1%;
+    width: 100%;
+    height: 1px;
+    background-color: #000000;
+}
+
+.flex-container:after {
+    content: '';
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    z-index: 1;
+    /* background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0) 50%, white 100%); Reversed color order */
+}
+
+.flex-container > * {
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.footer {
+    background-color: rgb(30, 138, 138);
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+}
