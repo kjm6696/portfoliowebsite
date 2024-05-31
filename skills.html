@@ -3,6 +3,7 @@
     <head>
         <title>Koben Milam Portfolio</title>
         <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="skills.css">
         <script src="js/main.js"></script>
     </head>
     <body>
@@ -19,8 +20,193 @@
             <a href="resume.html">Resume</a>
             <a href="contact.html">Contact</a>
         </div>
-        <p>Tech Skills (Languages)</p>
-        <p>IST Skills</p>
-        <p>Soft Skills</p>
+        <div class="container">
+            <h1>My Skills</h1>
+            <div class="content">
+                <div class="left-column">
+                    <h2>Coding Experience</h2>
+                    <div class="experience">
+                         <div class="job"> <!-- template for jobs/interships -->
+                            <p>Developed web applications and components using JavaScript, HTML, and CSS. Collaborated with the design team to create responsive and user-friendly interfaces.</p>
+                            <p>Developed object oriented applications using Java. Created GUI for the applications with the use of IDE compilers like Apache NetBeans and IntelliJ</p>
+                            <p>Developed and maintained a database for a small business using SQL. Created queries to extract data for analysis and reporting.</p>
+                            <p>Developed scripts for games such as GTA5 written in LUA. Listing and selling the scripts on the <a href="https://forum.cfx.re/" target="_blank">https://forum.cfx.re/</a> earned me more than $500 in revenue.</p>
+                            <p>Developed smalled scalled games with the use on the Unity game engine and coded in C#.</p>
+                        </div> 
+                    </div>
+                    <h2>Education</h2>
+                    <div class="education">
+                        <div class="school">
+                            <h3>Bachelor of Science in Information Science and Technology (Work in Progress)</h3>
+                            <h4>Penn State University</h4>
+                            <p>2021-2024</p>
+                            <p>Specialized in User Experience and Design.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="right-column">
+                    <h2>Skills</h2>
+                    <div class="skills">
+                        <div class="skill">
+                            <h3>Web Development</h3>
+                            <div class="progress-bar">
+                                <div class="progress" id="progressBar" style="width: 81%;">81%</div>
+                            </div>
+                        </div>
+                        <div class="skill">
+                            <h3>UX Design</h3>
+                            <div class="progress-bar">
+                                <div class="progress" id="progressBar" style="width: 76%;">76%</div>
+                            </div>
+                        </div>
+                        <div class="skill">
+                            <h3>Networking</h3>
+                            <div class="progress-bar">
+                                <div class="progress" id="progressBar" style="width: 66%;">66%</div>
+                            </div>
+                        </div>
+                        <div class="skill">
+                            <h3>Hardware & Software</h3>
+                            <div class="progress-bar">
+                                <div class="progress" id="progressBar" style="width: 91%;">91%</div>
+                            </div>
+                        </div>
+                        <div class="skill">
+                            <h3>Java</h3>
+                            <div class="progress-bar">
+                                <div class="progress" id="progressBar" style="width: 86%;">86%</div>
+                            </div>
+                        </div>
+                        <div class="skill">
+                            <h3>SQL</h3>
+                            <div class="progress-bar">
+                                <div class="progress" id="progressBar" style="width: 91%;">91%</div>
+                            </div>
+                        </div>
+                        <div class="skill">
+                            <h3>LUA</h3>
+                            <div class="progress-bar">
+                                <div class="progress" id="progressBar" style="width: 96%;">96%</div>
+                            </div>
+                        <div class="skill">
+                            <h3>C#</h3>
+                            <div class="progress-bar">
+                                <div class="progress" id="progressBar" style="width: 45%;">45%</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <script>
+            document.addEventListener("DOMContentLoaded", function() {
+                document.querySelector(".container").classList.add("show");
+            });
+
+            // Get all progress bars
+            const progressBars = document.querySelectorAll('.progress');
+
+            // Iterate through each progress bar
+            progressBars.forEach(progressBar => {
+                // Get the percentage value from the progress bar's inner text
+                const percentage = parseInt(progressBar.innerText);
+
+                // Function to set the background color based on the percentage
+                function setColor(percentage) {
+                    let red, green, blue;
+
+                    // Calculate RGB values based on the percentage
+                    if (percentage < 5) {
+                        red = 255;
+                        green = 0;
+                        blue = 0;
+                    } else if (percentage < 10) {
+                        red = 255;
+                        green = 51;
+                        blue = 0;
+                    } else if (percentage < 15) {
+                        red = 255;
+                        green = 102;
+                        blue = 0;
+                    } else if (percentage < 20) {
+                        red = 255;
+                        green = 153;
+                        blue = 0;
+                    } else if (percentage < 25) {
+                        red = 255;
+                        green = 204;
+                        blue = 0;
+                    } else if (percentage < 30) {
+                        red = 255;
+                        green = 255;
+                        blue = 0;
+                    } else if (percentage < 35) {
+                        red = 204;
+                        green = 255;
+                        blue = 0;
+                    } else if (percentage < 40) {
+                        red = 153;
+                        green = 255;
+                        blue = 0;
+                    } else if (percentage < 45) {
+                        red = 102;
+                        green = 255;
+                        blue = 0;
+                    } else if (percentage < 50) {
+                        red = 51;
+                        green = 255;
+                        blue = 0;
+                    } else if (percentage < 55) {
+                        red = 0;
+                        green = 255;
+                        blue = 0;
+                    } else if (percentage < 60) {
+                        red = 0;
+                        green = 255;
+                        blue = 51;
+                    } else if (percentage < 65) {
+                        red = 0;
+                        green = 255;
+                        blue = 102;
+                    } else if (percentage < 70) {
+                        red = 0;
+                        green = 255;
+                        blue = 153;
+                    } else if (percentage < 75) {
+                        red = 0;
+                        green = 255;
+                        blue = 204;
+                    } else if (percentage < 80) {
+                        red = 0;
+                        green = 255;
+                        blue = 255;
+                    } else if (percentage < 85) {
+                        red = 0;
+                        green = 204;
+                        blue = 255;
+                    } else if (percentage < 90) {
+                        red = 0;
+                        green = 153;
+                        blue = 255;
+                    } else if (percentage < 95) {
+                        red = 0;
+                        green = 102;
+                        blue = 255;
+                    } else if (percentage < 100) {
+                        red = 0;
+                        green = 51;
+                        blue = 255;
+                    } else {
+                        red = 0;
+                        green = 0;
+                        blue = 255;
+                    }
+
+                    progressBar.style.backgroundColor = `rgb(${red}, ${green}, ${blue})`;
+                }
+                setColor(percentage);
+            });
+        </script>
     </body>
 </html>
