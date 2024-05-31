@@ -91,7 +91,7 @@
                         <div class="skill">
                             <h3>C#</h3>
                             <div class="progress-bar">
-                                <div class="progress" id="progressBar" style="width: 45%;">45%</div>
+                                <div class="progress" id="progressBar" >45%</div>
                             </div>
                         </div>
                     </div>
@@ -111,7 +111,7 @@
             progressBars.forEach(progressBar => {
                 // Get the percentage value from the progress bar's inner text
                 const percentage = parseInt(progressBar.innerText);
-
+                
                 // Function to set the background color based on the percentage
                 function setColor(percentage) {
                     let red, green, blue;
@@ -204,6 +204,16 @@
                     }
 
                     progressBar.style.backgroundColor = `rgb(${red}, ${green}, ${blue})`;
+                }
+                var width = 0;
+                var id = setInterval(frame, 10);
+                function frame() {
+                    if (width >= percentage) {
+                        clearInterval(id);
+                    } else {
+                        width++;
+                        progressBar.style.width = width + '%';
+                    }
                 }
                 setColor(percentage);
             });
