@@ -9,6 +9,15 @@
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Adjust shadow blur and opacity */
     margin-left: 15%;
     margin-right: 15%;
+    background-color: white;
+}
+
+body {
+    background: linear-gradient(to right, rgb(48, 219, 219), rgb(30, 138, 138));
+}
+
+.topNav a:nth-child(6) {
+    background-color: rgb(13, 59, 59)
 }
 
 @keyframes fadeInAnimation {
@@ -18,9 +27,6 @@
     100% {
         opacity: 1;
     }
-}
-.topNav a:nth-child(6) {
-    background-color: rgb(13, 59, 59)
 }
 
 .container.show {

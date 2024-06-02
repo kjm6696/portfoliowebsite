@@ -19,6 +19,10 @@
     background-color: rgb(13, 59, 59)
 }
 
+body {
+    background: linear-gradient(to right, rgb(48, 219, 219), rgb(30, 138, 138));
+}
+
 .classes {
     background-color: rgb(13, 59, 59);
 }
@@ -80,6 +84,7 @@
     animation-fill-mode: forwards;
     padding: 30px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    background-color: white;
 }
 
 @keyframes fadeInAnimation {

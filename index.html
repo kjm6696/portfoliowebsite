@@ -3,13 +3,10 @@
 <head>
     <title>Koben Milam Portfolio</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="index.css">
     <script src="js/main.js"></script>
 </head>
 <body>
-    <div class="header">
-        <h1 class="titleName">Koben Milam</h1>
-        <p class="desc">Personal Portfolio</p>
-    </div>
     <div class="topNav">
         <a href="index.html">Home</a>
         <a href="about.html">About</a>
@@ -19,7 +16,79 @@
         <a href="resume.html">Resume</a>
         <a href="contact.html">Contact</a>
     </div>
-    <script src="js/index.js" type="module"></script>
+    <div class="hero">
+        <div class="hero-content">
+            <h1>Welcome to my Website Portfolio</h1>
+            <p>Koben Milam</p>
+            <a href="#explore" class="btn">Explore More</a>
+        </div>
+    </div>
+    <div id="explore" class="explore-section">
+        <div class="row">
+            <div class="thumbnail">
+                <a href="about.html"> <!-- Link to the about page -->
+                    <div class="block">
+                        <img src="assets/about-thumbnail.png" alt="About">
+                        <div class="block-overlay"></div> <!-- Block overlay effect -->
+                    </div>
+                    <div class="description">Dive into my personal story, professional journey, and aspirations.</div>
+                </a>
+            </div>
+            <div class="thumbnail">
+                <a href="project.html"> <!-- Link to the projects page -->
+                    <div class="block">
+                        <img src="assets/projects-thumbnail.png" alt="Projects">
+                        <div class="block-overlay"></div> <!-- Block overlay effect -->
+                    </div>
+                    <div class="description">Explore a diverse collection of my past and current projects, ranging from software development to creative endeavors.</div>
+                </a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="thumbnail">
+                <a href="skills.html"> <!-- Link to the skills page -->
+                    <div class="block">
+                        <img src="assets/skills-thumbnail.png" alt="Skills">
+                        <div class="block-overlay"></div> <!-- Block overlay effect -->
+                    </div>
+                    <div class="description">Delve into my comprehensive skill set, including programming languages, tools, and technologies I'm proficient in.</div>
+                </a>
+            </div>
+            <div class="thumbnail">
+                <a href="classes.html"> <!-- Link to the classes page -->
+                    <div class="block">
+                        <img src="assets/classes-thumbnail.png" alt="Classes">
+                        <div class="block-overlay"></div> <!-- Block overlay effect -->
+                    </div>
+                    <div class="description">Browse through the courses, workshops, and certifications I've completed, showcasing my commitment to continuous learning and professional development.</div>
+                </a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="thumbnail">
+                <a href="resume.html"> <!-- Link to the resume page -->
+                    <div class="block">
+                        <img src="assets/resume-thumbnail.png" alt="Resume">
+                        <div class="block-overlay"></div> <!-- Block overlay effect -->
+                    </div>
+                    <div class="description">View my detailed resume to get a comprehensive overview of my education, work experience, skills, and achievements.</div>
+                </a>
+            </div>
+            <div class="thumbnail">
+                <a href="contact.html"> <!-- Link to the contact page -->
+                    <div class="block">
+                        <img src="assets/contact-thumbnail.png" alt="Contact">
+                        <div class="block-overlay"></div> <!-- Block overlay effect -->
+                    </div>
+                    <div class="description">Reach out to me directly to discuss potential collaborations, projects, or opportunities, or simply to connect and start a conversation.</div>
+                </a>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+
+    </script>
 </body>
 
 </html>
