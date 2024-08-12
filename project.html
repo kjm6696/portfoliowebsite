@@ -1,41 +1,73 @@
 <!DOCTYPE html>
-<html> 
-    <head>
-        <title>Koben Milam Portfolio</title>
-        <link rel="stylesheet" href="style.css">
-        <link rel="stylesheet" href="project.css">
-        <script src="js/main.js"></script>
-    </head>
-    <body>
-        <div class="header">
-            <h1 class="titleName">Koben Milam</h1>
-            <p class="desc">Projects</p>
-        </div>
-        <div class="topNav">
-            <a href="index.html">Home</a>
-            <a href="about.html">About</a>
-            <a href="project.html">Projects</a>
-            <a href="skills.html">Skills</a>
-            <a href="classes.html">Classes</a>
-            <a href="resume.html">Resume</a>
-            <a href="contact.html">Contact</a>
-        </div>
-        <div class="container">
-            <div class="project">
-                <div class="project1">
-                    <h2>Project 1</h2>
-                    <p>Personal Project</p>
-                </div>
-                <div class="project2">
-                    <h2>Project 2</h2>
-                    <p>School Project</p>
-                </div>
-                <div class="project3">
-                    <h2>Project 3</h2>
-                    <p>Personal Projects</p>
+<html>
+<head>
+    <title>Koben Milam Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="project.css">
+    <script type="importmap">
+        {
+            "imports": {
+                "lit": "https://cdn.jsdelivr.net/npm/lit@2.0.0/+esm",
+                "orange-card": "./node_modules/orange-card/src/orange-card.js",
+                "@lrnwebcomponents/meme-maker/src/meme-maker.js": "https://cdn.jsdelivr.net/npm/@lrnwebcomponents/meme-maker@1.0.0/src/meme-maker.js"
+            }
+        }
+        </script>
+    <script src="js/main.js" type="module"></script>
+</head>
+<body>
+    <div class="header">
+        <h1 class="titleName">Koben Milam</h1>
+        <p class="desc">Projects</p>
+    </div>
+    <div class="topNav">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="project.html">Projects</a>
+        <a href="classes.html">Classes</a>
+        <a href="resume.html">Resume</a>
+    </div>
+
+    <div class="container">
+        <!-- Featured Project Section -->
+        <div class="featured-project">
+            <h2>Featured Project: Wallyland Java Application</h2>
+            <div class="featured-content">
+                <img src="path/to/wallyland-screenshot.png" alt="Wallyland Screenshot" class="featured-img">
+                <div class="featured-description">
+                    <p>A brief description of the Wallyland Java application. Highlight the key features and what makes it special.</p>
                 </div>
             </div>
         </div>
-        <script src="js/index.js" type="module"></script>
-    </body>
+
+        <!-- Projects Overview Section -->
+        <div class="project-overview">
+            <div class="project-card">
+                <h3>Orange Card Component</h3>
+                <orange-card
+                    title="My Custom Title"
+                    Image="https://toppng.com/uploads/preview/and-blank-effect-transparent-11546868080xgtiz6hxid.png"
+                    memeTop="This is not"
+                    memeBottom="transparent"
+                    carrot="Details"
+                    drop-shadow
+                ></orange-card>
+            </div>
+
+            <div class="project-card">
+                <h3>Upcoming Project</h3>
+                <div class="upcoming-content">
+                    <p>Details about an upcoming project. Keep your audience excited with a teaser or coming soon message.</p>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <h3>Another Project</h3>
+                <div class="another-content">
+                    <p>Highlight another significant project here. Add a brief description and any relevant screenshots.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
 </html>

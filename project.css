@@ -7,12 +7,88 @@ body {
 }
 
 .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Featured Project Section */
+.featured-project {
+    background-color: #e0f7fa; /* Light teal */
+    border-radius: 15px;
+    padding: 30px;
+    margin-bottom: 40px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease-in-out;
+}
+
+.featured-project:hover {
+    transform: scale(1.02);
+}
+
+.featured-content {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    margin-bottom: 5%;
-    background-color: white;
-    width: 75%;
-    margin: auto;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    align-items: center;
+    justify-content: space-between;
+}
+
+.featured-img {
+    max-width: 50%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.featured-description {
+    max-width: 45%;
+    margin-left: 20px;
+}
+
+/* Project Overview Section */
+.project-overview {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.project-card {
+    background-color: #f0f0f0;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Adjusted styling for orange-card */
+orange-card {
+    display: block;
+    width: 100%;    /* Ensure full width within its container */
+    max-width: 600px; /* Set a maximum width */
+    margin: 20px auto; /* Center it horizontally and add some spacing */
+    box-sizing: border-box; /* Include padding and border in element's total width and height */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .featured-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .featured-img, .featured-description {
+        max-width: 100%;
+        margin: 0;
+    }
+
+    .featured-img {
+        margin-bottom: 20px;
+    }
+
+    .project-overview {
+        grid-template-columns: 1fr;
+    }
 }
