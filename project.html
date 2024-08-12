@@ -4,16 +4,6 @@
     <title>Koben Milam Portfolio</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="project.css">
-    <script type="importmap">
-        {
-            "imports": {
-                "lit": "https://cdn.jsdelivr.net/npm/lit@2.0.0/+esm",
-                "orange-card": "./node_modules/orange-card/src/orange-card.js",
-                "@lrnwebcomponents/meme-maker/src/meme-maker.js": "https://cdn.jsdelivr.net/npm/@lrnwebcomponents/meme-maker@1.0.0/src/meme-maker.js"
-            }
-        }
-        </script>
-    <script src="js/main.js" type="module"></script>
 </head>
 <body>
     <div class="header">
@@ -24,8 +14,10 @@
         <a href="index.html">Home</a>
         <a href="about.html">About</a>
         <a href="project.html">Projects</a>
+        <a href="skills.html">Skills</a>
         <a href="classes.html">Classes</a>
         <a href="resume.html">Resume</a>
+        <a href="contact.html">Contact</a>
     </div>
 
     <div class="container">
@@ -33,38 +25,70 @@
         <div class="featured-project">
             <h2>Featured Project: Wallyland Java Application</h2>
             <div class="featured-content">
-                <img src="path/to/wallyland-screenshot.png" alt="Wallyland Screenshot" class="featured-img">
+                <div class="featured-img-wrapper">
+                    <img src="assets/wallyland.png" alt="Wallyland Screenshot" class="featured-img">
+                </div>
                 <div class="featured-description">
-                    <p>A brief description of the Wallyland Java application. Highlight the key features and what makes it special.</p>
+                    <h3>Project Overview: </h3>
+                    <p>The Wallyland Java Application is a comprehensive system designed for a fictional theme park, Wallyland. This application serves both visitors and employees, providing features such as ticket purchasing, ticket searching, user creation and management, and interactive maps.</p>
+                    <h3>Key Features:</h3>
+                    <p>Ticket Management: Allows users to purchase and search for tickets efficiently.</p>
+                    <p>User Management: Facilitates user creation and management with CRUD (Create, Read, Update, Delete) operations.</p>
+                    <p>Interactive Maps: Provides a visual guide of the theme park for an enhanced visitor experience.</p>
+                    <h3>Technical Details: </h3>
+                    <p>Persistence: Utilizes Serializable to ensure data persistence for users and tickets.</p>
+                    <p>Data Organization: Employs hash maps and array lists to manage data.</p>
+                    <p>Development Tools: Developed using Apache NetBeans and version-controlled via GitHub.</p>
+                    <h3>Team Project:</h3>
+                    <p>This was a collaborative effort within a group, showcasing teamwork and version control practices.</p>
                 </div>
             </div>
         </div>
 
-        <!-- Projects Overview Section -->
-        <div class="project-overview">
-            <div class="project-card">
-                <h3>Orange Card Component</h3>
-                <orange-card
-                    title="My Custom Title"
-                    Image="https://toppng.com/uploads/preview/and-blank-effect-transparent-11546868080xgtiz6hxid.png"
-                    memeTop="This is not"
-                    memeBottom="transparent"
-                    carrot="Details"
-                    drop-shadow
-                ></orange-card>
-            </div>
-
-            <div class="project-card">
-                <h3>Upcoming Project</h3>
-                <div class="upcoming-content">
-                    <p>Details about an upcoming project. Keep your audience excited with a teaser or coming soon message.</p>
+        <!-- FiveM Scripts Section -->
+        <div class="fivem-scripts">
+            <h2>FiveM Scripts</h2>
+            <div class="script-card">
+                <div class="script-image">
+                    <a href="https://forum.cfx.re/t/qbcore-free-km-lockbox-police-vehicle-lockbox/4861150" target="_blank"><img src="assets/script1.png" alt="Police Lock Box" class="script-image"></a>
+                </div>
+                <div class="script-content">
+                    <h3>Script 1: [Police Lock Box Script : FREE]</h3>
+                    <p>A widely popular script for police lock boxes, viewed over 7,000 times on the CFX forum and downloaded more than 650 times.</p>
                 </div>
             </div>
 
-            <div class="project-card">
-                <h3>Another Project</h3>
-                <div class="another-content">
-                    <p>Highlight another significant project here. Add a brief description and any relevant screenshots.</p>
+            <div class="script-card">
+                <div class="script-image">
+                    <a href="https://forum.cfx.re/t/qb-paid-km-burgershot-job-with-robbery/4857416" target="_blank"><img src="assets/script2.png" alt="Police Lock Box" class="script-image"></a>
+                </div>
+                <div class="script-content">
+                    <h3>Script 2: [Burgershot Job Script : PAID]</h3>
+                    <p>Adds a functional burger joint where players can work as employees and sell sandwiches to other players.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Shopfront Explanation Section -->
+        <div class="shopfront-explanation">
+            <h2>IST 411 Shopfront Explanation</h2>
+            <div class="shopfront-content">
+                <div class="shopfront-section">
+                    <h3>Frontend</h3>
+                    <p>Technologies Used: Angular, HTML, CSS, and JavaScript.</p>
+                    <p>Design Principles: Focuses on modern, responsive design to ensure a seamless user experience.</p>
+                </div>
+
+                <div class="shopfront-section">
+                    <h3>Backend</h3>
+                    <p>Technologies Used: MongoDB and Mongoose.</p>
+                    <p>Key Functionalities: Manages server-side data and interactions, supporting robust application performance.</p>
+                </div>
+
+                <div class="shopfront-section">
+                    <h3>Middleware</h3>
+                    <p>Components: Node.js server for handling CRUD operations</p>
+                    <p>Testing: Unit testing performed using Jasmine and Selenium to ensure reliable communication between frontend and backend.</p>
                 </div>
             </div>
         </div>

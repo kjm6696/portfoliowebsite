@@ -4,7 +4,12 @@
 
 body {
     background: linear-gradient(to right, rgb(48, 219, 219), rgb(30, 138, 138));
+    font-family: Arial, sans-serif;
+    color: #333;
+    margin: 0;
+    padding: 0;
 }
+
 
 .container {
     max-width: 1200px;
@@ -12,17 +17,28 @@ body {
     padding: 20px;
 }
 
-/* Featured Project Section */
-.featured-project {
-    background-color: #e0f7fa; /* Light teal */
+.header {
+    text-align: center;
+    color: white;
+    margin-bottom: 40px;
+}
+
+.titleName {
+    font-size: 3rem;
+    margin: 0;
+}
+
+.featured-project, .fivem-scripts, .shopfront-explanation {
+    background: #ffffff; /* White background for sections */
     border-radius: 15px;
     padding: 30px;
     margin-bottom: 40px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-    transition: transform 0.3s ease-in-out;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
 }
 
-.featured-project:hover {
+.featured-project:hover, .fivem-scripts:hover, .shopfront-explanation:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
     transform: scale(1.02);
 }
 
@@ -32,55 +48,89 @@ body {
     justify-content: space-between;
 }
 
-.featured-img {
-    max-width: 50%;
+.featured-img-wrapper {
+    width: 50%;
+    position: relative;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
 }
+
+.featured-img {
+    width: 100%;
+    height: auto;
+    display: block;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
 
 .featured-description {
-    max-width: 45%;
-    margin-left: 20px;
+    width: 45%;
 }
 
-/* Project Overview Section */
-.project-overview {
+.fivem-scripts {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 20px;
 }
 
-.project-card {
-    background-color: #f0f0f0;
+.script-card {
+    background-color: #f9f9f9;
     border-radius: 10px;
     padding: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
 }
 
-.project-card:hover {
-    transform: translateY(-5px);
+.script-card:hover {
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    transform: translateY(-5px);
 }
 
-/* Adjusted styling for orange-card */
-orange-card {
-    display: block;
-    width: 100%;    /* Ensure full width within its container */
-    max-width: 600px; /* Set a maximum width */
-    margin: 20px auto; /* Center it horizontally and add some spacing */
-    box-sizing: border-box; /* Include padding and border in element's total width and height */
+.script-image {
+    width: 100%;
+    height: 200px;
+    background: #eee;
+    border-radius: 10px;
+    margin-bottom: 10px;
 }
 
-/* Responsive Design */
+.script-content {
+    text-align: center;
+}
+
+.shopfront-explanation {
+    background: #fafafa; /* Light grey background for explanation */
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.shopfront-content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.shopfront-section {
+    background: #ffffff;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.shopfront-section h3 {
+    margin-top: 0;
+}
+
 @media (max-width: 768px) {
     .featured-content {
         flex-direction: column;
         text-align: center;
     }
 
-    .featured-img, .featured-description {
-        max-width: 100%;
+    .featured-img-wrapper, .featured-description {
+        width: 100%;
         margin: 0;
     }
 
@@ -88,7 +138,7 @@ orange-card {
         margin-bottom: 20px;
     }
 
-    .project-overview {
+    .fivem-scripts {
         grid-template-columns: 1fr;
     }
 }
